@@ -9,8 +9,8 @@ android {
     compileSdk = 33
     defaultConfig {
         applicationId = "com.lt2333.simplicitytools"
-        minSdk = 31
-        targetSdk = 33
+        minSdk = 30
+        targetSdk = 30
         versionCode = 75
         versionName = "1.7.5"
         buildConfigField("String", "BUILD_TIME", "\"${System.currentTimeMillis()}\"")
