@@ -32,16 +32,16 @@ jobs:
       run: |
         bash ./gradlew assembleDebug
         
-    - name: Sign Debug APK
-      if: success()
-      id: sign_debug
-      uses: r0adkll/sign-android-release@v1.0.4
-      with:
-        releaseDirectory: ./app/build/outputs/apk/debug
-        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
-        alias: ${{ secrets.KEY_STORE_ALIAS }}
-        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
-        keyPassword: ${{ secrets.KEY_STORE_PASSWORD }}
+#    - name: Sign Debug APK
+#      if: success()
+#      id: sign_debug
+#      uses: r0adkll/sign-android-release@v1.0.4
+#      with:
+#        releaseDirectory: ./app/build/outputs/apk/debug
+#        signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+#        alias: ${{ secrets.KEY_STORE_ALIAS }}
+#        keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+#        keyPassword: ${{ secrets.KEY_STORE_PASSWORD }}
         
     - name: Upload Debug APK
       uses: actions/upload-artifact@v3
