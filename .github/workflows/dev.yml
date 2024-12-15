@@ -44,7 +44,7 @@ jobs:
         keyPassword: ${{ secrets.KEY_STORE_PASSWORD }}
         
     - name: Upload Debug APK
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: WooBox_Debug
         path: ${{ steps.sign_debug.outputs.signedReleaseFile }}
